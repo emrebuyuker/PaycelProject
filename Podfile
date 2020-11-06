@@ -10,5 +10,6 @@ target 'PaycelProject' do
 pod 'Firebase'
 pod 'Firebase/Analytics'
 pod 'Firebase/RemoteConfig'
+pod 'lottie-ios'
 
 end

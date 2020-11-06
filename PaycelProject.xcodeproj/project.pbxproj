@@ -22,6 +22,7 @@
 		380D49DF2555DFEB00210DB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 380D49E12555DFEB00210DB4 /* Localizable.strings */; };
 		380D49E82555E14900210DB4 /* HomePageViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D49E72555E14900210DB4 /* HomePageViewModelDelegate.swift */; };
 		380D49EB2555E16100210DB4 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D49EA2555E16100210DB4 /* HomePageViewModel.swift */; };
+		380D49FE2555E4A200210DB4 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 380D49FD2555E4A200210DB4 /* lottie.json */; };
 		D408A6C5DFAF3B0FFA37E553 /* Pods_PaycelProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80849872F8811F4EFA78CF69 /* Pods_PaycelProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		380D49E02555DFEB00210DB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		380D49E72555E14900210DB4 /* HomePageViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelDelegate.swift; sourceTree = "<group>"; };
 		380D49EA2555E16100210DB4 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		380D49FD2555E4A200210DB4 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie.json; sourceTree = SOURCE_ROOT; };
 		3FEF2EE07C088886BA72444F /* Pods-PaycelProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaycelProject.debug.xcconfig"; path = "Target Support Files/Pods-PaycelProject/Pods-PaycelProject.debug.xcconfig"; sourceTree = "<group>"; };
 		80849872F8811F4EFA78CF69 /* Pods_PaycelProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaycelProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAF0FF3C7956066AA2DB28 /* Pods-PaycelProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaycelProject.release.xcconfig"; path = "Target Support Files/Pods-PaycelProject/Pods-PaycelProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				380D48EF25558E5E00210DB4 /* Assets.xcassets */,
 				380D48F125558E5E00210DB4 /* LaunchScreen.storyboard */,
 				380D48F425558E5E00210DB4 /* Info.plist */,
+				380D49FD2555E4A200210DB4 /* lottie.json */,
 				380D49222555963200210DB4 /* GoogleService-Info.plist */,
 			);
 			path = PaycelProject;
@@ -302,6 +305,7 @@
 				380D48F325558E5E00210DB4 /* LaunchScreen.storyboard in Resources */,
 				380D49232555963300210DB4 /* GoogleService-Info.plist in Resources */,
 				380D48F025558E5E00210DB4 /* Assets.xcassets in Resources */,
+				380D49FE2555E4A200210DB4 /* lottie.json in Resources */,
 				380D48EE25558E5700210DB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
