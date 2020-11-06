@@ -18,9 +18,17 @@ class HomePageScreenViewController: UIViewController {
 	
 	var animationView: AnimationView?
 	
+	// MARK: - Properties
+	
+	private var viewModel: HomePageViewModel!
+	
+	// MARK: - Life Cycles
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-		self.animationViewPlay()
+		self.viewModel = HomePageViewModel()
+		self.viewModel.delegate = self
+//		self.animationViewPlay()
     }
 }
 
@@ -37,5 +45,11 @@ extension HomePageScreenViewController {
 	func animationViewPause() {
 		self.animationView?.pause()
 		self.animationView?.removeFromSuperview()
+	}
+}
+
+extension HomePageScreenViewController: HomePageViewModelDelegate {
+	func updateView(_ value: String) {
+		
 	}
 }

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol HomePageViewModelDelegate {
+	
+	func updateView(_ value: String)
+}
