@@ -13,6 +13,8 @@
 		380D48EE25558E5700210DB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380D48EC25558E5700210DB4 /* Main.storyboard */; };
 		380D48F025558E5E00210DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380D48EF25558E5E00210DB4 /* Assets.xcassets */; };
 		380D48F325558E5E00210DB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380D48F125558E5E00210DB4 /* LaunchScreen.storyboard */; };
+		380D49232555963300210DB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 380D49222555963200210DB4 /* GoogleService-Info.plist */; };
+		D408A6C5DFAF3B0FFA37E553 /* Pods_PaycelProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80849872F8811F4EFA78CF69 /* Pods_PaycelProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		380D48EF25558E5E00210DB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380D48F225558E5E00210DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		380D48F425558E5E00210DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380D49222555963200210DB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FEF2EE07C088886BA72444F /* Pods-PaycelProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaycelProject.debug.xcconfig"; path = "Target Support Files/Pods-PaycelProject/Pods-PaycelProject.debug.xcconfig"; sourceTree = "<group>"; };
+		80849872F8811F4EFA78CF69 /* Pods_PaycelProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaycelProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAF0FF3C7956066AA2DB28 /* Pods-PaycelProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaycelProject.release.xcconfig"; path = "Target Support Files/Pods-PaycelProject/Pods-PaycelProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D408A6C5DFAF3B0FFA37E553 /* Pods_PaycelProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0412EFF9B4B722609024C055 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FEF2EE07C088886BA72444F /* Pods-PaycelProject.debug.xcconfig */,
+				D2AAF0FF3C7956066AA2DB28 /* Pods-PaycelProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		25E59FCF9EC48B0EB14FC0C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80849872F8811F4EFA78CF69 /* Pods_PaycelProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		380D48DA25558E5700210DB4 = {
 			isa = PBXGroup;
 			children = (
 				380D48E525558E5700210DB4 /* PaycelProject */,
 				380D48E425558E5700210DB4 /* Products */,
+				0412EFF9B4B722609024C055 /* Pods */,
+				25E59FCF9EC48B0EB14FC0C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +90,7 @@
 				380D48EF25558E5E00210DB4 /* Assets.xcassets */,
 				380D48F125558E5E00210DB4 /* LaunchScreen.storyboard */,
 				380D48F425558E5E00210DB4 /* Info.plist */,
+				380D49222555963200210DB4 /* GoogleService-Info.plist */,
 			);
 			path = PaycelProject;
 			sourceTree = "<group>";
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 380D48F725558E5E00210DB4 /* Build configuration list for PBXNativeTarget "PaycelProject" */;
 			buildPhases = (
+				6DB89F706A4292A95CF9CF7E /* [CP] Check Pods Manifest.lock */,
 				380D48DF25558E5700210DB4 /* Sources */,
 				380D48E025558E5700210DB4 /* Frameworks */,
 				380D48E125558E5700210DB4 /* Resources */,
+				37C63996EACECF831C3106AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,12 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				380D48F325558E5E00210DB4 /* LaunchScreen.storyboard in Resources */,
+				380D49232555963300210DB4 /* GoogleService-Info.plist in Resources */,
 				380D48F025558E5E00210DB4 /* Assets.xcassets in Resources */,
 				380D48EE25558E5700210DB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37C63996EACECF831C3106AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaycelProject/Pods-PaycelProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaycelProject/Pods-PaycelProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaycelProject/Pods-PaycelProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DB89F706A4292A95CF9CF7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaycelProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		380D48DF25558E5700210DB4 /* Sources */ = {
@@ -283,6 +356,7 @@
 		};
 		380D48F825558E5E00210DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FEF2EE07C088886BA72444F /* Pods-PaycelProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +377,7 @@
 		};
 		380D48F925558E5E00210DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2AAF0FF3C7956066AA2DB28 /* Pods-PaycelProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
