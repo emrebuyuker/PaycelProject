@@ -26,6 +26,8 @@
 		380D4A032555EE2300210DB4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D4A022555EE2300210DB4 /* APIService.swift */; };
 		380D4A072555EF5600210DB4 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D4A062555EF5600210DB4 /* SearchModel.swift */; };
 		380D4A1B25560B1C00210DB4 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D4A1A25560B1C00210DB4 /* ResponseModel.swift */; };
+		380D4A302556957E00210DB4 /* PaycellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D4A2F2556957D00210DB4 /* PaycellButton.swift */; };
+		380D4A342556967600210DB4 /* PaycellTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D4A332556967600210DB4 /* PaycellTextField.swift */; };
 		D408A6C5DFAF3B0FFA37E553 /* Pods_PaycelProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80849872F8811F4EFA78CF69 /* Pods_PaycelProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		380D4A022555EE2300210DB4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		380D4A062555EF5600210DB4 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		380D4A1A25560B1C00210DB4 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		380D4A2F2556957D00210DB4 /* PaycellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaycellButton.swift; sourceTree = "<group>"; };
+		380D4A332556967600210DB4 /* PaycellTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaycellTextField.swift; sourceTree = "<group>"; };
 		3FEF2EE07C088886BA72444F /* Pods-PaycelProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaycelProject.debug.xcconfig"; path = "Target Support Files/Pods-PaycelProject/Pods-PaycelProject.debug.xcconfig"; sourceTree = "<group>"; };
 		80849872F8811F4EFA78CF69 /* Pods_PaycelProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaycelProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAF0FF3C7956066AA2DB28 /* Pods-PaycelProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaycelProject.release.xcconfig"; path = "Target Support Files/Pods-PaycelProject/Pods-PaycelProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		380D48E525558E5700210DB4 /* PaycelProject */ = {
 			isa = PBXGroup;
 			children = (
+				380D4A2D2556954400210DB4 /* Presentation */,
 				380D4A012555EE0F00210DB4 /* WebServicee */,
 				380D498A2555C30A00210DB4 /* Application */,
 				380D49D22555DF2100210DB4 /* Common */,
@@ -266,6 +271,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		380D4A2D2556954400210DB4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				380D4A2E2556954E00210DB4 /* Controls */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		380D4A2E2556954E00210DB4 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				380D4A2F2556957D00210DB4 /* PaycellButton.swift */,
+				380D4A332556967600210DB4 /* PaycellTextField.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -391,10 +413,12 @@
 				380D48E925558E5700210DB4 /* SceneDelegate.swift in Sources */,
 				380D49CF2555DDB100210DB4 /* HomePageScreenViewController.swift in Sources */,
 				380D4A072555EF5600210DB4 /* SearchModel.swift in Sources */,
+				380D4A302556957E00210DB4 /* PaycellButton.swift in Sources */,
 				380D4A032555EE2300210DB4 /* APIService.swift in Sources */,
 				380D49C52555CF9B00210DB4 /* SplashScreenViewModelDelegate.swift in Sources */,
 				380D49D52555DF4700210DB4 /* UIViewControllerExtensions.swift in Sources */,
 				380D4A1B25560B1C00210DB4 /* ResponseModel.swift in Sources */,
+				380D4A342556967600210DB4 /* PaycellTextField.swift in Sources */,
 				380D49E82555E14900210DB4 /* HomePageViewModelDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
