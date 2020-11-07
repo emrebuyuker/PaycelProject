@@ -6,8 +6,15 @@
   
 */
 
+/* General */
+"messageTitle" = "WARNING";
+"messageErrorTitle" = "ERROR";
+
 /* SplashScreen */
 "splashScreen.title" = "Splash Screen";
 
 /* HomePageScreen */
 "homePageScreen.title" = "Home Page Screen";
+"homePageScreen.searchButtonKey" = "Search";
+"homePageScreen.searchTextFieldKey" = "Movies Search";
+"homePageScreen.warningText" = "Please write the movie you would like to search.";

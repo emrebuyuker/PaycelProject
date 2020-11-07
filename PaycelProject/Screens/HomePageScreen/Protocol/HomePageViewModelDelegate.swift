@@ -9,5 +9,5 @@ import Foundation
 
 protocol HomePageViewModelDelegate {
 	
-	func updateView(_ value: String)
+	func updateView(_ searchModel: [SearchModel], errorText: String)
 }

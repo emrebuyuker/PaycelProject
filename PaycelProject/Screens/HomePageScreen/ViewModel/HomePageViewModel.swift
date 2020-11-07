@@ -13,14 +13,16 @@ class HomePageViewModel: NSObject {
 	
 	var delegate: HomePageViewModelDelegate?
 	
-	var apiService: APIService!
+	private var apiService: APIService!
 	
 	override init() {
 		super.init()
 		self.apiService = APIService()
-		
-		apiService.apiToGetEmployeeData(search: "emre") { (searchModel) in
-			print(searchModel)
+	}
+	
+	func serviceCallMethod(search: String) {
+		apiService.apiToGetEmployeeData(search: search) { (searchModel, error)  in
+			self.delegate?.updateView(searchModel, errorText: error)
 		}
 	}
 }

@@ -6,14 +6,14 @@
 //
 
 import Foundation
-import Alamofire
 
 class APIService :  NSObject {
 	
 	private let baseUrlString = "https://www.omdbapi.com/"
 	private let apikey = "a1d9971b"
+	private let searchModel: [SearchModel] = []
 	
-	func apiToGetEmployeeData(search: String ,completion : @escaping ([SearchModel]) -> ()) {
+	func apiToGetEmployeeData(search: String ,completion : @escaping ([SearchModel], _ error: String) -> ()) {
 		let apiUrl = "\(baseUrlString)?apikey=\(apikey)&s=\(search)&type=movie"
 		
 		URLSession.shared.dataTask(with: URL(string: apiUrl)!,
@@ -29,7 +29,7 @@ class APIService :  NSObject {
 										result = try JSONDecoder().decode(ResponseModel.self, from: data)
 									}
 									catch {
-										print("error")
+										completion(self.searchModel, error.localizedDescription)
 									}
 									
 									guard let finalResult = result else {
@@ -38,7 +38,7 @@ class APIService :  NSObject {
 									
 									// Update our movies array
 									let newMovies = finalResult.Search
-									completion(newMovies)
+									completion(newMovies, error?.localizedDescription ?? "")
 								   }).resume()
 	}
 }

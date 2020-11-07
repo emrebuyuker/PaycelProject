@@ -14,6 +14,10 @@ class HomePageScreenViewController: UIViewController {
 	
 	private let lottiName = "lottie"
 	
+	// MARK: - Outlets
+	
+	@IBOutlet weak var searchTextField: PaycellTextField!
+	
 	// MARK: - Properties
 	
 	var animationView: AnimationView?
@@ -28,8 +32,18 @@ class HomePageScreenViewController: UIViewController {
         super.viewDidLoad()
 		self.viewModel = HomePageViewModel()
 		self.viewModel.delegate = self
-//		self.animationViewPlay()
     }
+	
+	@IBAction func searchButtonClick(_ sender: Any) {
+		self.view.endEditing(true)
+		if self.searchTextField.text == "" {
+			self.createAlert(message: self.localizableGetString(forkey: "homePageScreen.warningText"), title: self.localizableGetString(forkey: "messageTitle"))
+			return
+		}
+		self.animationViewPlay()
+		let searchText = self.searchTextField.text?.replacingOccurrences(of: " ", with: "") ?? ""
+		self.viewModel.serviceCallMethod(search: searchText)
+	}
 }
 
 extension HomePageScreenViewController {
@@ -44,12 +58,22 @@ extension HomePageScreenViewController {
 	
 	func animationViewPause() {
 		self.animationView?.pause()
-		self.animationView?.removeFromSuperview()
+		DispatchQueue.main.async {
+			self.animationView?.removeFromSuperview()
+		}
 	}
 }
 
 extension HomePageScreenViewController: HomePageViewModelDelegate {
-	func updateView(_ value: String) {
-		
+	func updateView(_ searchModel: [SearchModel], errorText: String) {
+		if errorText != "" {
+			DispatchQueue.main.async {
+				self.animationViewPause()
+				self.createAlert(message: errorText, title: self.localizableGetString(forkey: "messageErrorTitle"))
+				return
+			}
+		}
+		print(searchModel)
+		self.animationViewPause()
 	}
 }
