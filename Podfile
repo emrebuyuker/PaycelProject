@@ -11,5 +11,6 @@ pod 'Firebase'
 pod 'Firebase/Analytics'
 pod 'Firebase/RemoteConfig'
 pod 'lottie-ios'
+pod 'SDWebImage', '~> 5.0'
 
 end

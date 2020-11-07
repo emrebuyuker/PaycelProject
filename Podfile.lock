@@ -76,12 +76,16 @@ PODS:
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
+  - SDWebImage (5.9.4):
+    - SDWebImage/Core (= 5.9.4)
+  - SDWebImage/Core (5.9.4)
 
 DEPENDENCIES:
   - Firebase
   - Firebase/Analytics
   - Firebase/RemoteConfig
   - lottie-ios
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
@@ -98,6 +102,7 @@ SPEC REPOS:
     - lottie-ios
     - nanopb
     - PromisesObjC
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Firebase: 50be68416f50eb4eb2ecb0e78acab9a051ef95df
@@ -113,7 +118,8 @@ SPEC CHECKSUMS:
   lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
 
-PODFILE CHECKSUM: 6fdc8e6149c4bed2557be25b39073d8ec2533721
+PODFILE CHECKSUM: d7e6c891a78bdf3803854ddf1abcfc88f8e96d2b
 
 COCOAPODS: 1.10.0
