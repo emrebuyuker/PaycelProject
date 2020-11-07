@@ -28,6 +28,8 @@
 		380D4A1B25560B1C00210DB4 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D4A1A25560B1C00210DB4 /* ResponseModel.swift */; };
 		380D4A302556957E00210DB4 /* PaycellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D4A2F2556957D00210DB4 /* PaycellButton.swift */; };
 		380D4A342556967600210DB4 /* PaycellTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D4A332556967600210DB4 /* PaycellTextField.swift */; };
+		380D4A3A2556AB4500210DB4 /* HomePageScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D4A382556AB4500210DB4 /* HomePageScreenTableViewCell.swift */; };
+		380D4A3B2556AB4500210DB4 /* HomePageScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380D4A392556AB4500210DB4 /* HomePageScreenTableViewCell.xib */; };
 		D408A6C5DFAF3B0FFA37E553 /* Pods_PaycelProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80849872F8811F4EFA78CF69 /* Pods_PaycelProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		380D4A1A25560B1C00210DB4 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		380D4A2F2556957D00210DB4 /* PaycellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaycellButton.swift; sourceTree = "<group>"; };
 		380D4A332556967600210DB4 /* PaycellTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaycellTextField.swift; sourceTree = "<group>"; };
+		380D4A382556AB4500210DB4 /* HomePageScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePageScreenTableViewCell.swift; path = PaycelProject/Screens/HomePageScreen/HomePageScreenTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		380D4A392556AB4500210DB4 /* HomePageScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomePageScreenTableViewCell.xib; path = PaycelProject/Screens/HomePageScreen/HomePageScreenTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		3FEF2EE07C088886BA72444F /* Pods-PaycelProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaycelProject.debug.xcconfig"; path = "Target Support Files/Pods-PaycelProject/Pods-PaycelProject.debug.xcconfig"; sourceTree = "<group>"; };
 		80849872F8811F4EFA78CF69 /* Pods_PaycelProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaycelProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAF0FF3C7956066AA2DB28 /* Pods-PaycelProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaycelProject.release.xcconfig"; path = "Target Support Files/Pods-PaycelProject/Pods-PaycelProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		380D49C92555DD1A00210DB4 /* HomePageScreen */ = {
 			isa = PBXGroup;
 			children = (
+				380D4A372556AB1D00210DB4 /* TableViewCell */,
 				380D49E62555E11900210DB4 /* Protocol */,
 				380D49CD2555DD9200210DB4 /* ViewController */,
 				380D49E52555E11300210DB4 /* ViewModel */,
@@ -288,6 +293,15 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
+		380D4A372556AB1D00210DB4 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				380D4A382556AB4500210DB4 /* HomePageScreenTableViewCell.swift */,
+				380D4A392556AB4500210DB4 /* HomePageScreenTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				380D49CB2555DD4600210DB4 /* HomePageScreenViewController.xib in Resources */,
+				380D4A3B2556AB4500210DB4 /* HomePageScreenTableViewCell.xib in Resources */,
 				380D49DF2555DFEB00210DB4 /* Localizable.strings in Resources */,
 				380D48F325558E5E00210DB4 /* LaunchScreen.storyboard in Resources */,
 				380D49232555963300210DB4 /* GoogleService-Info.plist in Resources */,
@@ -413,6 +428,7 @@
 				380D48E925558E5700210DB4 /* SceneDelegate.swift in Sources */,
 				380D49CF2555DDB100210DB4 /* HomePageScreenViewController.swift in Sources */,
 				380D4A072555EF5600210DB4 /* SearchModel.swift in Sources */,
+				380D4A3A2556AB4500210DB4 /* HomePageScreenTableViewCell.swift in Sources */,
 				380D4A302556957E00210DB4 /* PaycellButton.swift in Sources */,
 				380D4A032555EE2300210DB4 /* APIService.swift in Sources */,
 				380D49C52555CF9B00210DB4 /* SplashScreenViewModelDelegate.swift in Sources */,

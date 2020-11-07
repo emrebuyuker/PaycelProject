@@ -13,7 +13,10 @@ class HomePageViewModel: NSObject {
 	
 	var delegate: HomePageViewModelDelegate?
 	
+	// MARK: - Properties
+	
 	private var apiService: APIService!
+	private var sortedSearchModel: [SearchModel] = []
 	
 	override init() {
 		super.init()
@@ -21,8 +24,10 @@ class HomePageViewModel: NSObject {
 	}
 	
 	func serviceCallMethod(search: String) {
-		apiService.apiToGetEmployeeData(search: search) { (searchModel, error)  in
-			self.delegate?.updateView(searchModel, errorText: error)
+		let searchText = search.replacingOccurrences(of: " ", with: "")
+		apiService.apiToGetEmployeeData(search: searchText) { (searchModel, error)  in
+			self.sortedSearchModel = (searchModel.sorted(by: { $0.Year > $1.Year }))
+			self.delegate?.updateView(self.sortedSearchModel, errorText: error)
 		}
 	}
 }

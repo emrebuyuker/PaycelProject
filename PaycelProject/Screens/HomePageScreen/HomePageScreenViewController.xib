@@ -4,12 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomePageScreenViewController" customModule="PaycelProject" customModuleProvider="target">
             <connections>
                 <outlet property="searchTextField" destination="Dlb-Es-tVs" id="fl6-CK-heK"/>
+                <outlet property="tableView" destination="otu-nh-oqK" id="z9W-lp-gV7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2Sb-eO-wWg"/>
             </connections>
         </placeholder>
@@ -36,11 +38,19 @@
                         <action selector="searchButtonClick:" destination="-1" eventType="touchUpInside" id="euK-vx-0uR"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="otu-nh-oqK">
+                    <rect key="frame" x="0.0" y="126" width="414" height="720"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="otu-nh-oqK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3zo-Qb-iIf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="otu-nh-oqK" secondAttribute="trailing" id="OGe-Fl-aGZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="otu-nh-oqK" secondAttribute="bottom" constant="16" id="QA6-qS-U1g"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sfX-FK-dP9" secondAttribute="trailing" constant="16" id="Qvv-eJ-8Sr"/>
+                <constraint firstItem="otu-nh-oqK" firstAttribute="top" secondItem="Dlb-Es-tVs" secondAttribute="bottom" constant="16" id="UGa-Qo-5Ij"/>
                 <constraint firstItem="sfX-FK-dP9" firstAttribute="height" secondItem="Dlb-Es-tVs" secondAttribute="height" id="ZeU-3W-8Re"/>
                 <constraint firstItem="Dlb-Es-tVs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="fBS-6S-gho"/>
                 <constraint firstItem="sfX-FK-dP9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="hGz-R1-fUN"/>
@@ -50,4 +60,9 @@
             <point key="canvasLocation" x="39" y="92"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
