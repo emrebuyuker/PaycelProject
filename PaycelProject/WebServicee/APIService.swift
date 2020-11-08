@@ -10,13 +10,14 @@ import Foundation
 class APIService :  NSObject {
 	
 	private let baseUrlString = "https://www.omdbapi.com/"
+	private let baseUrl = URL(string: "https://www.omdbapi.com/")!
 	private let apikey = "a1d9971b"
 	private let searchModel: [SearchModel] = []
 	
 	func apiToGetEmployeeData(search: String ,completion : @escaping ([SearchModel], _ error: String) -> ()) {
 		let apiUrl = "\(baseUrlString)?apikey=\(apikey)&s=\(search)&type=movie"
 		
-		URLSession.shared.dataTask(with: URL(string: apiUrl)!,
+		URLSession.shared.dataTask(with: (URL(string: apiUrl)) ?? baseUrl,
 								   completionHandler: { data, response, error in
 									
 									guard let data = data, error == nil else {

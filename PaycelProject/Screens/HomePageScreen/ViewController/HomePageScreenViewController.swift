@@ -48,7 +48,7 @@ class HomePageScreenViewController: UIViewController {
 			return
 		}
 		self.animationViewPlay()
-		self.viewModel.serviceCallMethod(search: searchText)
+		self.viewModel.serviceCallMethod(search: self.searchTextField.text!)
 	}
 }
 

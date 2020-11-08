@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAnalytics
 
 class HomePageViewModel: NSObject {
 	
@@ -24,10 +25,19 @@ class HomePageViewModel: NSObject {
 	}
 	
 	func serviceCallMethod(search: String) {
+		self.addFirebaseEvent(search: search)
 		let searchText = search.replacingOccurrences(of: " ", with: "")
 		apiService.apiToGetEmployeeData(search: searchText) { (searchModel, error)  in
 			self.sortedSearchModel = (searchModel.sorted(by: { $0.Year > $1.Year }))
 			self.delegate?.updateView(self.sortedSearchModel, errorText: error)
 		}
+	}
+	
+	private func addFirebaseEvent(search: String) {
+		Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+			AnalyticsParameterItemID: "id-\(search)",
+			AnalyticsParameterItemName: search,
+			AnalyticsParameterContentType: "cont"
+		])
 	}
 }
