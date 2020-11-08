@@ -12,6 +12,7 @@
 
 /* SplashScreen */
 "splashScreen.title" = "Splash Screen";
+"splashScreen.welcomeText" = "Welcome To Paycell IOS Project";
 
 /* HomePageScreen */
 "homePageScreen.title" = "Home Page Screen";

@@ -16,9 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqB-vR-QKT">
-                                <rect key="frame" x="207" y="475" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgS-RO-23O" customClass="PaycellLabel" customModule="PaycelProject" customModuleProvider="target">
+                                <rect key="frame" x="8" y="120" width="398" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizableKey" value="splashScreen.welcomeText"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="payCellIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Thx-H2-8ze">
+                                <rect key="frame" x="143" y="152" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="aN1-Db-NYx"/>
+                                    <constraint firstAttribute="width" constant="128" id="odW-7D-m9X"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqB-vR-QKT">
+                                <rect key="frame" x="8" y="440" width="398" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -26,11 +42,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aqB-vR-QKT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8VJ-CU-X8w"/>
-                            <constraint firstItem="aqB-vR-QKT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="RAg-0b-hKE"/>
+                            <constraint firstItem="aqB-vR-QKT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="8eg-bv-Frz"/>
+                            <constraint firstItem="aqB-vR-QKT" firstAttribute="top" secondItem="Thx-H2-8ze" secondAttribute="bottom" constant="160" id="Cyb-so-XOJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aqB-vR-QKT" secondAttribute="trailing" constant="8" id="K9J-cR-Suz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xgS-RO-23O" secondAttribute="trailing" constant="8" id="LYw-Dj-GmY"/>
+                            <constraint firstItem="xgS-RO-23O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="M7y-Hn-Zes"/>
+                            <constraint firstItem="Thx-H2-8ze" firstAttribute="top" secondItem="xgS-RO-23O" secondAttribute="bottom" constant="32" id="axO-VB-lrb"/>
+                            <constraint firstItem="Thx-H2-8ze" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="esS-h9-2dz"/>
+                            <constraint firstItem="xgS-RO-23O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="jVr-Bx-05X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1Bj-NH-vce"/>
+                    <navigationItem key="navigationItem" id="1Bj-NH-vce" customClass="PaycellNavigationItem" customModule="PaycelProject" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizableKey" value="splashScreen.title"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
                     <connections>
                         <outlet property="moviesLabel" destination="aqB-vR-QKT" id="4dy-2t-24s"/>
                     </connections>
@@ -59,6 +85,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="payCellIcon" width="480" height="360"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
